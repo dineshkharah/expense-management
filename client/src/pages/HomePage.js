@@ -12,6 +12,7 @@ import Spinner from "./../components/Spinner";
 import moment from "moment";
 import Analytics from "../components/Analytics";
 import Header from "../components/Layout/Header";
+import './styles.css';
 const { RangePicker } = DatePicker;
 
 const HomePage = () => {
@@ -86,6 +87,7 @@ const HomePage = () => {
         setLoading(false);
       } catch (error) {
         message.error("Ftech Issue With Tranction");
+        console.log(error)
       }
     };
     getAllTransactions();
@@ -199,7 +201,7 @@ const HomePage = () => {
           )}
         </div>
         <Modal
-          title={editable ? "Edit Transaction" : "Add Transection"}
+          title={editable ? "Edit Transaction" : "Add Transaction"}
           open={showModal}
           onCancel={() => setShowModal(false)}
           footer={false}

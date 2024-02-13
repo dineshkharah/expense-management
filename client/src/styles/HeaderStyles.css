@@ -1,18 +1,28 @@
+/* Header.css */
+
 .navbar {
-  background-color: #6f4e3742 !important;
+  background-color: #3498db !important;
+  align-items: center;
+  justify-content: center;
+  /* Subtle blue color for the navbar background */
 }
 
 .navbar .navbar-brand {
-  color: #6f4e37 !important;
+  color: #333;
+  /* Dark gray text color for the brand */
   font-weight: bold;
   font-size: 1.5rem;
 }
 
 .nav-link {
+  color: #333;
+  /* Dark gray text color for the links */
   font-size: 1.2rem;
 }
 
 .navbar h6 {
   margin-top: 0px;
   margin-right: 20px;
+  color: #333;
+  /* Dark gray text color for the h6 element */
 }
