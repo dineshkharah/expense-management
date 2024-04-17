@@ -6,16 +6,16 @@ const getAllTransection = async (req, res) => {
     const transections = await transectionModel.find({
       ...(frequency !== "custom"
         ? {
-            date: {
-              $gt: moment().subtract(Number(frequency), "d").toDate(),
-            },
-          }
+          date: {
+            $gt: moment().subtract(Number(frequency), "d").toDate(),
+          },
+        }
         : {
-            date: {
-              $gte: selectedDate[0],
-              $lte: selectedDate[1],
-            },
-          }),
+          date: {
+            $gte: selectedDate[0],
+            $lte: selectedDate[1],
+          },
+        }),
       userid: req.body.userid,
       ...(type !== "all" && { type }),
     });
@@ -59,6 +59,7 @@ const addTransection = async (req, res) => {
     res.status(500).json(error);
   }
 };
+
 
 module.exports = {
   getAllTransection,
